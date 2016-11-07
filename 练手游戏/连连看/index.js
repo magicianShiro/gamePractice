@@ -72,7 +72,7 @@ Ligature.prototype = {
 		this.createTable();
 		this.createGame();
 	},
-	// 获取随机数
+	// 打乱数组
 	getRandomArr:function(){
 		//创建一个长度和存图片名的数组长度一样的一个空数组1
 		var randomArr1 = new Array(this.dbimgArr.length);
@@ -92,7 +92,6 @@ Ligature.prototype = {
 		for(var k=0;k<randomArr3.length;k++){
 			randomArr3[k] = this.dbimgArr[randomArr2[k]];
 		}
-		// console.log(randomArr3);
 		this.randomArr = randomArr3;
 	},
 	// 创建表格
@@ -364,7 +363,7 @@ Ligature.prototype = {
 
 		return paths;
 	},
-	//判断A点到十字线上的某个点的连线上是否有图片
+	// 判断两个点的连线上是否有图片
 	checkTwoPath:function(target,current){
 		//如果是同一列
 		if(current.y == target.y){
@@ -390,9 +389,9 @@ Ligature.prototype = {
 		}
 		return true;
 	},
-	//获取A点与B点相交的点的位置
+	// 获取B点和有效点A同行同列的两个点
 	getSamePostions:function(target,current){
-		//定义一个数组存放相交的点的位置
+		//定义一个数组存放同行同列的两个点的位置
 		var paths = [{x:0,y:0},{x:0,y:0}]
 		//遍历目标位置的十字线
 		for(var i=0;i<target.length;i++){
@@ -547,7 +546,7 @@ Ligature.prototype = {
 			return str;
 		}
 	},
-	// 获取所有坐标
+	// 得到路径上所有点坐标并画线
 	pathCoordinate:function(pointAndCrossDirection){
 		//判断绘制线的方向
 		var pathDirection = ""; 
