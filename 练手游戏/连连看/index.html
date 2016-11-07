@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<table id="table" class="table" border="1">
+
+	</table>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">		
+		///////////////////////////////////////////////////////////////////////
+		//  1.rowAndCol 要放置几行几列的图片								 //
+		//	2.canvas  整个游戏区域的宽高									 //
+		//	3.imgType 游戏图片的种类										 //
+		//  缺省值：														 //
+		//			rowAndCol:6												 //
+		//			canvas : 600										     //
+		//			imgType : 16										     //
+		//	注意项: 													     //
+		//			rowAndCol的值必须为偶数								     //
+		// 			图片命名一定要 1.jpg、2.jpg...						     //
+		//			imgType的值根据你的图片数来，最大不要超过你的图片总数量  //
+		///////////////////////////////////////////////////////////////////////
+
+		var ligature = new Ligature({
+			rowAndCol:6,
+			canvas:600,
+			imgType:16
+		});
+
+		ligature.gameStart();
+	</script>
+</body>
+
+</html>
