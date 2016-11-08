@@ -215,7 +215,11 @@ Ligature.prototype = {
 								obj.pathCoordinate(pathAndDirection);
 
 								// 获取div元素，清除掉练的线以及图片
-								var divObj = document.querySelectorAll('td div');								
+								var divObj = document.querySelectorAll('td div');
+
+								// 因为这里会延迟执行，但是不会阻塞后续代码的执行
+								// 因此最后的obj.temp=null会先执行
+								// 因此需要提前获取想要消除的两张图片的DOM元素,即firstImg和secondImg								
 								setTimeout(function(){
 								
 									divObj.forEach(function(element,index){
