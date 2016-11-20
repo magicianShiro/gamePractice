@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ccc;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 /* input标签隐藏 */
 input[type="file"] {
@@ -36,10 +36,8 @@ input[type="file"] {
     width: 400px;
     height: 400px;
     position: absolute;
-    top: 50%;
+    margin-top:40px;
     left: 100%;
-    transform: translateY(-50%);
-    margin-top:-50px;
     transition: all .7s ease;
     text-align: center;    
     z-index: -1;

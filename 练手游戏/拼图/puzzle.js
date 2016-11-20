@@ -41,7 +41,7 @@ Puzzle.prototype = {
 
 		//改变游戏区域的大小
 		this.gameAreaObj.style.width = this.imgAreaWidth+'px';
-		this.gameAreaObj.style.height = this.imgAreaHeight+'px'; 
+		this.gameAreaObj.style.height = this.imgAreaHeight+this.gameStartBtnObj.offsetHeight+30+'px'; 
 
 		// 计算出每个小格子的宽
 		this.cellWidth = this.imgAreaWidth / this.leverArr[1];
@@ -133,7 +133,10 @@ Puzzle.prototype = {
 		// 将图片移入可视区域
 		// this.gameAreaObj.style.background = 'url('+this.imgUrl +')';
 		this.gameAreaObj.style.left = '50%';
-		this.gameAreaObj.style.transform= 'translate(-50%,-50%)';
+		this.gameAreaObj.style.transform= 'translateX(-50%)';
+
+		// 改变body y轴的overflow
+		document.body.style.overflowY = "auto";
 
 		// 使按钮绑定事件，点击按钮开始整个游戏
 		this.gameStartBtnObj.onclick = this.clickHandle();
