@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>puzzle</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+	<!-- 获取图片 -->
+	<input type="file" id="file">
+	<!-- 字体图标 -->
+	<div id="btn">
+		<i class="iconfont icon-xiangji2"></i>		
+	</div>
+	<div id="gameArea">
+		<!-- 游戏开始按钮 -->
+		<div id="gameStart">点击开始</div>
+		<!-- 图片存放的区域 -->
+		<div id="imgArea"></div>
+	</div>
+	
+	
+</body>
+	<script src="puzzle.js"></script>
+	<script>
+		///////////////////////////////////////////////////////////////////////
+		//  1.leverNow 当前难度，即几行几列  								 //
+		//	2.imgAreaSize  拼图区域大小，即拼图区域的宽高，建议不要太大		 //
+		//  缺省值：														 //
+		//			leverNow:2												 //
+		//			imgAreaSize : 400									     //
+		//	注意项: 													     //
+		//			上传的图片不要太大，不然等待时间有点长				     //
+		// 			上传图片形式需要为正方形图片，或者高大于宽的图片		 //
+		//			leverNow的值最小为2，imgAreaSize的值的最小值为400  		 //
+		///////////////////////////////////////////////////////////////////////
+
+		var puzzle = new Puzzle({
+			// 当前等级
+			leverNow:2,
+			// 拼图区域大小
+			imgAreaSize:400
+		});
+		puzzle.gameStart();
+	</script>
+</html>

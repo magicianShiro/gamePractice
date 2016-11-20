@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+    overflow-x: hidden;
+}
+/* input标签隐藏 */
+input[type="file"] {
+    visibility: hidden;
+}
+
+
+#btn {
+    width: 200px;
+    height: 200px;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #666, -1px -1px 5px #666;
+    cursor: pointer;
+    transition: all .7s;
+}
+/* 字体图标 */
+#btn i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+/* 游戏区域 */
+#gameArea {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-top:-50px;
+    transition: all .7s ease;
+    text-align: center;    
+    z-index: -1;
+
+}
+/* 图片区域 */
+#imgArea {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* 每一个小方格*/
+#imgArea .imgCell {
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: absolute;
+    transition: left .4s ease-in-out, top .4s ease-in-out;
+}
+/* 游戏开始按钮 */
+#gameStart {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #fff;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+#gameStart:hover {
+    background-color: #449d44;
+    border-color: #398439;
+}
